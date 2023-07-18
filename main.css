@@ -4,6 +4,7 @@
   --gray-color: #cccccc;
   --dark-gray-color: #858584;
 }
+
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -452,9 +453,7 @@ main .faqs-section details[open] {
 main .faqs-section details[open] summary::after {
   content: url("data:image/svg+xml,<svg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 8L7 2L13 8' stroke='white' stroke-width='2'/></svg>");
 }
-redbg{
-  color: red;
-}
+
 main .faqs-section details summary {
   padding: 20px 0;
   font-style: normal;
