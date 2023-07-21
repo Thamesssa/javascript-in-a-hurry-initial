@@ -1,3 +1,5 @@
+
+
 document.querySelector("#open-nav-menu").addEventListener("click", function(){document.querySelector("header nav .wrapper").classList.add("nav-open");});
 
 document.querySelector("#close-nav-menu").addEventListener("click", function(){document.querySelector("header nav .wrapper").classList.remove("nav-open");});
@@ -60,5 +62,39 @@ setInterval(function(){
   
 },1000)
 
+// Gallery Section
 
+const galleryImages = [
+  { 
+    src:"./assets/gallery/image1.jpg",
+    alt:"Thumbnail Image 1"
+  } ,{ 
+    src:"./assets/gallery/image2.jpg",
+    alt:"Thumbnail Image 2"
+  } ,
+  { 
+    src:"./assets/gallery/image3.jpg",
+    alt:"Thumbnail Image 3"
+  }
+];
+
+// for (let image in galleryImages)
+// {
+//   console.log(galleryImages[image])
+// }
+
+let mainImage = document.querySelector("#gallery > img");
+let thumbnails = document.querySelector("#gallery .thumbnails");
+mainImage.src = galleryImages[0].src;
+mainImage.alt = galleryImages[0].alt;
+
+
+galleryImages.forEach(function(image,index){
+   let thumb = document.createElement("img");
+   thumb.src = image.src;
+   thumb.src = image.alt;
+   thumb.dataset.arrayIndex = index;
+   thumb.dataset.selected = false;
+   thumbnails.appendChild(thumb);
+});
 
